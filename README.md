@@ -1,3 +1,6 @@
+## how to run
+npm start 
+
 ## Objective
 Develop a simple email client application using React. (https://gist.githubusercontent.com/mrchenliang/9a08135afb75cc7c065f76bd921174ce/raw/d2e8156797de5cead73a131b79f3981b6f5b4b68/wireframe.png).
 
