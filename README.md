@@ -42,3 +42,6 @@ Develop a simple email client application using React. (https://gist.githubuserc
   * The inbox folder should display emails with `deleted` being `false`
 1. Implement a search bar to filter the emails by `subject`
   * when an user types in the search bar, it would filter emails which includes the word in the `subject` of the email
+
+### Reference:
+https://gist.github.com/mrchenliang/9a08135afb75cc7c065f76bd921174ce
