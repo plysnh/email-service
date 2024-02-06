@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+## Objective
+Develop a simple email client application using React. (https://gist.githubusercontent.com/mrchenliang/9a08135afb75cc7c065f76bd921174ce/raw/d2e8156797de5cead73a131b79f3981b6f5b4b68/wireframe.png).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### React App Setup
+1. Create a React Application: Set up a new React application using `npx create-react-app <project-name>`
+2. Project Structure: Organize your components, services, and assets in a clean and manageable structure.
 
-## Available Scripts
+### Fetching and Displaying Emails
+1. Data Fetching:
+  * Fetch email data from this URL: `https://gist.githubusercontent.com/mrchenliang/15e1989583fd6e6e04e1c49287934c91/raw/ed03cfea1e2edb0303543d2908cd7429ed75580d/email.json`.
+2. Load the data when the app initializes and lands on the homepage `/`
 
-In the project directory, you can run:
+### Email Sidebar View:
+1. Create a component to display the list of emails.
+2. Show the `from`, `subject`, `address` and `timestamp` for each email.
+3. Do not display the email's `message` in the Email Sidebar View.
+4. Ensure the background of the emails within the Email Sidebar View are different based on their status (unread, read, active).
+  * an email is unread when `read` is `false`
+  * an email is read when `read` is `true`
+  * an email is active when the message is being displayed in the Email Body View
 
-### `npm start`
+### Email Body View:
+1. It is blank when no email is selected (feel free to incorporate an icon or text as placeholder)
+2. Display the email and its full content, including the message.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Email Interaction:
+1. When an email is clicked within the Email Sidebar View, mark it as read and show its full content in the Email Body View.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### State Management
+1. React State:
+  * Efficiently manage the state for email statuses (unread, read, active).
+  * Ensure the UI reflects the current state accurately.
+### CSS Styling:
+1. Style your components using CSS. Ensure a clean and user-friendly UI.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### EXTA:
+1. Implement 2 folders: deleted and inbox.  
+  * The deleted folder should display emails with `deleted` being `true`
+  * The inbox folder should display emails with `deleted` being `false`
+1. Implement a search bar to filter the emails by `subject`
+  * when an user types in the search bar, it would filter emails which includes the word in the `subject` of the email
